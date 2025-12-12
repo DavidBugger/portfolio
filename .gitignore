@@ -41,11 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 # images
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.webp
+
 *.svg
 *.ico
 *.avif
