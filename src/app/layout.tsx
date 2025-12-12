@@ -1,17 +1,25 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/ui/Navbar';
 import Footer from './components/ui/Footer';
-import ThemeProvider from './components/theme-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
+// Viewport configuration
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: '#ffffff',
+  // Add any other viewport settings here
+};
+
+// Metadata configuration
 export const metadata: Metadata = {
   title: 'Dev Dave - Portfolio',
   description: 'Personal portfolio showcasing my projects and skills',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
-  themeColor: '#ffffff',
+  // Remove viewport and themeColor from here
 };
 
 export default function RootLayout({
@@ -22,7 +30,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
       <body className={`${inter.className} bg-white text-gray-900`}>
-        
         <Navbar />
         <main>{children}</main>
         <Footer />
