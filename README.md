@@ -1,36 +1,186 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevDave Portfolio - Next.js
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 14, TypeScript, and Tailwind CSS featuring dark mode, smooth animations, and a clean design.
 
-First, run the development server:
+## ✨ Features
 
+- 🎨 Modern, responsive design with smooth animations
+- 🌓 Dark mode support with theme persistence
+- 📱 Mobile-first approach
+- ⚡ Built with Next.js 14 App Router
+- 💎 TypeScript for type safety
+- 🎭 Tailwind CSS for styling
+- 🖼️ Optimized images with Next.js Image
+- 📧 Contact form with validation
+- 🎯 SEO optimized
+- ♿ Accessibility focused
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ installed
+- npm, yarn, or pnpm package manager
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd portfolio_revamp
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── sections/         # Main page sections
+│   │   │   ├── Hero.tsx
+│   │   │   ├── About.tsx
+│   │   │   ├── Projects.tsx
+│   │   │   └── Contact.tsx
+│   │   └── ui/               # Reusable UI components
+│   │       ├── Navbar.tsx
+│   │       ├── Footer.tsx
+│   │       └── Button.tsx
+│   ├── globals.css           # Global styles
+│   ├── layout.tsx            # Root layout
+│   └── page.tsx              # Home page
+├── public/                   # Static assets
+└── lib/                      # Utility functions
+```
 
-## Learn More
+## 🎨 Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Colors
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Update the color scheme in `tailwind.config.js`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```javascript
+colors: {
+  primary: "#F97316",  // Orange
+  // Add your custom colors
+}
+```
 
-## Deploy on Vercel
+### Content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Personal Information**: Update content in each section component
+2. **Projects**: Edit the `projects` array in `Projects.tsx`
+3. **Skills**: Modify the `skills` array in `About.tsx`
+4. **Contact Info**: Update `contactInfo` in `Contact.tsx`
+5. **Social Links**: Change URLs in `Navbar.tsx` and `Footer.tsx`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Images
+
+Replace placeholder images:
+1. Add your profile photo to `public/images/`
+2. Update the image path in `Hero.tsx`
+3. Add project screenshots to showcase your work
+
+### SEO
+
+Update metadata in `layout.tsx`:
+
+```typescript
+export const metadata: Metadata = {
+  title: "Your Name - Portfolio",
+  description: "Your description",
+  // Add more meta tags
+};
+```
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Animations**: CSS animations + Tailwind
+- **Form Handling**: React Hook Form (optional)
+
+## 📦 Build for Production
+
+```bash
+npm run build
+npm run start
+```
+
+## 🚢 Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Import project on [Vercel](https://vercel.com)
+3. Deploy with one click
+
+### Other Platforms
+
+- **Netlify**: Connect your repo and deploy
+- **AWS Amplify**: Use the Amplify CLI
+- **Docker**: Use the provided Dockerfile
+
+## 🎯 Performance Optimization
+
+- ✅ Image optimization with Next.js Image
+- ✅ Code splitting by default
+- ✅ CSS purging in production
+- ✅ Font optimization
+- ✅ Lazy loading components
+
+## 📝 Environment Variables
+
+Create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_SITE_URL=https://yoursite.com
+NEXT_PUBLIC_EMAIL_SERVICE_ID=your_service_id
+# Add other environment variables
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit PRs.
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 👨‍💻 Author
+
+**DevDave Solutions**
+- Website: [devdave.com](https://devdave.com)
+- GitHub: [@devdave](https://github.com/devdave)
+- LinkedIn: [DevDave](https://linkedin.com/in/devdave)
+
+## 🙏 Acknowledgments
+
+- Next.js Team for the amazing framework
+- Tailwind CSS for the utility-first CSS
+- Lucide for the beautiful icons
+
+---
+
+Made with ❤️ using Next.js and Tailwind CSS

@@ -39,3 +39,25 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.ico
+*.avif
+*.mp4
+*.webm
+*.ogg
+*.mp3
+*.wav
+*.flac
+*.m4a
+*.aac
+*.wav
+
+
+.gitignore
