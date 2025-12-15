@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
-  const roles = ["Freelancer", "Mobile Developer", "UI/UX Designer", "Problem Solver"];
+  const roles = ["Freelancer", "Mobile Developer", "Problem Solver"];
   const [currentRole, setCurrentRole] = useState(0);
 
   useEffect(() => {
