@@ -1,21 +1,21 @@
 "use client";
-
-import { Code, Palette, Rocket, Users } from "lucide-react";
+import { Code, Palette, Download, Rocket, Users } from "lucide-react";
+import { motion } from "framer-motion";
 
 const skills = [
   {
     category: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"],
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     percentage: 95,
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB"],
+    items: ["Python", "Django", "Flask", "FastAPI", "PHP", "Laravel", "PostgreSQL", "MySQL", "MongoDB"],
     percentage: 90,
   },
   {
     category: "Mobile",
-    items: ["React Native", "Flutter", "iOS", "Android"],
+    items: ["Flutter", "iOS", "Android"],
     percentage: 85,
   },
   {
@@ -49,6 +49,8 @@ const features = [
 ];
 
 export default function About() {
+
+  
   return (
     <section id="about" className="py-20 bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,7 +163,7 @@ export default function About() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <button className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/50">
             Download Resume
             <svg
@@ -178,7 +180,8 @@ export default function About() {
               />
             </svg>
           </button>
-        </div>
+          
+        </div> */}
       </div>
     </section>
   );

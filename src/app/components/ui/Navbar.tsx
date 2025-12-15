@@ -33,17 +33,17 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About Me", href: "/about" },
+    { name: "About Me", href: "#about" },
     { 
       name: "Services", 
-      href: "#",
+      href: "#services",
       dropdown: [
-        { name: "Web Development", href: "/services/web" },
-        { name: "Mobile Development", href: "/services/mobile" },
-        { name: "UI/UX Design", href: "/services/design" },
+        { name: "Web Development", href: "#services" },
+        { name: "Mobile Development", href: "#services" },
+        // { name: "UI/UX Design", href: "/services/design" },
       ]
     },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Hire me", href: "#contact" },
   ];
 
   return (
@@ -121,28 +121,19 @@ export default function Navbar() {
 
             {/* Social Icons */}
             <div className="flex items-center space-x-3">
+              
               <a
-                href="https://dribbble.com"
+                href="https://www.linkedin.com/in/david-akanang-0789771a4/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-orange-500 hover:bg-orange-600 flex items-center justify-center text-white transition-all hover:scale-110"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm7.5 9.5c-.4.1-2.07.4-4.17.2.87-2.26 1.23-4.1 1.3-4.48 1.84 1.23 3.17 3.16 3.37 5.28zm-5.03-6.23c-.1.4-.5 2.3-1.4 4.6-3.03-1.13-5.8-1.13-6.1-1.13-.5-2.7.77-5.17 3.03-6.63.5.33 2.77 2.1 4.47 3.16zM5.5 5.5c.3 0 3.47.03 6.6 1.2-1.13 2-3.1 5.5-3.8 6.8-1.87-1.37-3.47-4.03-2.8-8zm5.9 13.1c-1.93 0-3.7-.67-5.1-1.8.67-1.4 2.9-5.63 5.23-7.13.1 0 .2-.07.3-.1 1.13 2.97 1.6 5.47 1.73 6.33-.9.57-2.03.9-3.16.9zm4.6-.7c-.07-.63-.47-2.83-1.4-5.67 1.93.27 3.63-.17 3.83-.23.2 2.1-.6 4.03-2.43 5.9z"/>
-                </svg>
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-orange-500 hover:bg-orange-600 flex items-center justify-center text-white transition-all hover:scale-110"
+                className="w-10 h-10 rounded-full   bg-orange-500 hover:bg-orange-600 flex items-center justify-center text-white transition-all hover:scale-110"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/DavidBugger"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-orange-500 hover:bg-orange-600 flex items-center justify-center text-white transition-all hover:scale-110"
@@ -154,7 +145,7 @@ export default function Navbar() {
             </div>
 
             {/* Theme Toggle */}
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="w-10 h-10 rounded-full border-2 border-slate-300 dark:border-slate-600 flex items-center justify-center hover:border-orange-500 dark:hover:border-orange-400 transition-colors"
             >
@@ -167,7 +158,7 @@ export default function Navbar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                 </svg>
               )}
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile menu button */}

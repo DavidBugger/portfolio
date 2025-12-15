@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowDown, Download } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -18,6 +19,16 @@ export default function Hero() {
   }, []);
 
   if (!mounted) return null;
+
+  const handleDownloadResume = () => {
+    // Create a link element
+    const link = document.createElement("a");
+    link.href = "/DevDave_Resume.pdf"; // Path to your resume in public folder
+    link.download = "DevDave_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
@@ -53,11 +64,23 @@ export default function Hero() {
               applications and crafting clean, efficient code.
             </p>
 
-            <button className="group relative inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/50">
+            <a href="#projects" className="group relative inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/50">
               <span>Explore Work</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowDown className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
-            </button>
+            </a>
+
+          
+              <motion.button
+                onClick={handleDownloadResume}
+                className="group relative inline-flex items-center gap-2 bg-transparent border-2 border-orange-500 text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20 px-8 py-4 rounded-full font-semibold transition-all duration-300"
+                whileHover={{ scale: 0.95 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span>Download Resume</span>
+                <Download className="w-5 h-5" />
+              </motion.button>
+
 
             {/* Stats */}
             <div className="flex gap-8 pt-8">

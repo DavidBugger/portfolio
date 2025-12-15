@@ -3,73 +3,74 @@
 import { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
 
-const categories = ["All", "Web Apps", "Mobile Apps", "UI/UX Design", "E-commerce"];
+const categories = ["All", "Web Apps", "Mobile Apps", "Tax & Audit Solutions", "Oil & Gas Solutions"];
 
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    category: "Web Apps",
+    title: "Zambis Petroleum Operations Portal",
+    category: "Oil & Gas Solutions",
     tags: ["Next.js", "Stripe", "PostgreSQL"],
-    description: "A full-featured e-commerce platform with real-time inventory management",
-    image: "🛒",
-    liveUrl: "#",
-    githubUrl: "#",
-    gradient: "from-blue-500 to-purple-600",
+    description: "An integrated digital operations platform for Zambis Petroleum, designed to streamline oilfield logistics, monitor equipment and asset utilization in real time, manage rentals and inventory, and support efficient operations across multiple field locations.",
+    image: "/projects/zambis.png",
+    liveUrl: "https://zambispetroleum.com",
+    githubUrl: "https://github.com/DavidBugger",
+    gradient: "from-amber-500 to-slate-700",
   },
+
   {
     id: 2,
-    title: "Fitness Tracking App",
+    title: "Autorentals",
     category: "Mobile Apps",
-    tags: ["React Native", "Firebase", "Charts"],
-    description: "Mobile app for tracking workouts and nutrition with AI recommendations",
-    image: "💪",
-    liveUrl: "#",
-    githubUrl: "#",
+    tags: ["Flutter", "Firebase", "Paystack"],
+    description: "Mobile Apps for car rentals and e-hailing services",
+    image: "/projects/autorentals.jpg",
+    liveUrl: "https://play.google.com/store/apps/details?id=com.vehicle.autocar_rentals&pcampaignid=web_share",
+    githubUrl: "https://github.com/DavidBugger",
     gradient: "from-green-500 to-teal-600",
   },
   {
     id: 3,
-    title: "SaaS Dashboard",
+    title: "Oya Riyders Dashboard",
     category: "Web Apps",
-    tags: ["React", "Node.js", "MongoDB"],
-    description: "Analytics dashboard for SaaS businesses with real-time metrics",
-    image: "📊",
-    liveUrl: "#",
-    githubUrl: "#",
+    tags: ["Next.js", "Paystack", 'Supabase', "PostgreSQL"],
+    description: "Analytics dashboard for ride bookings with real-time metrics",
+    image: "/projects/oya_riyders.png",
+    liveUrl: "https://oya-riyders-dashboard.vercel.app/",
+    githubUrl: "https://github.com/DavidBugger",
     gradient: "from-orange-500 to-red-600",
   },
   {
     id: 4,
-    title: "Banking App Design",
-    category: "UI/UX Design",
-    tags: ["Figma", "Mobile", "Design System"],
-    description: "Modern banking app interface with focus on user experience",
-    image: "🏦",
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "Learn Hausa",
+    category: "Mobile Apps",
+    tags: ["Flutter", "Firebase", "Paystack"],
+    description: "Mobile Apps for learning Hausa language with AI ",
+    image: "/projects/learn_hausa3.jpg",
+    liveUrl: "https://github.com/DavidBugger/learn_hausa.git",
+    githubUrl: "https://github.com/DavidBugger",
     gradient: "from-indigo-500 to-blue-600",
   },
   {
     id: 5,
-    title: "Food Delivery Platform",
-    category: "E-commerce",
-    tags: ["Next.js", "Maps API", "Payments"],
+    title: "Mabiz Global",
+    category: "Tax & Audit Solutions",
+    tags: ["Next.js", "Stripe", "Supabase", "PostgreSQL"],
     description: "Full-stack food delivery platform with real-time order tracking",
-    image: "🍕",
-    liveUrl: "#",
-    githubUrl: "#",
+    image: "/projects/mabiz.png",
+    liveUrl: "https://mabizglobal.com",
+    githubUrl: "https://github.com/DavidBugger",
     gradient: "from-yellow-500 to-orange-600",
   },
   {
     id: 6,
-    title: "Social Media App",
+    title: "Learn Hausa Backend",
     category: "Mobile Apps",
-    tags: ["Flutter", "GraphQL", "WebSocket"],
-    description: "Social networking app with real-time messaging and stories",
-    image: "📱",
-    liveUrl: "#",
-    githubUrl: "#",
+    tags: ["Python", "DJango", "GraphQL", "WebSocket", "PostgreSQL"],
+    description: "API for learning Hausa language with AI integrations ",
+    image: "/projects/learn-hausa-backend.png",
+    liveUrl: "https://github.com/DavidBugger/learn-hausa-backend.git",
+    githubUrl: "https://github.com/DavidBugger/learn-hausa-backend.git",
     gradient: "from-pink-500 to-purple-600",
   },
 ];
@@ -104,11 +105,10 @@ export default function Projects() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 ${
-                activeCategory === category
+              className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 ${activeCategory === category
                   ? "bg-orange-500 text-white shadow-lg shadow-orange-500/50 scale-105"
                   : "bg-white dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-orange-50 dark:hover:bg-slate-600"
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -126,27 +126,39 @@ export default function Projects() {
               onMouseLeave={() => setHoveredId(null)}
             >
               {/* Project Image/Icon */}
+
               <div
                 className={`relative h-64 bg-gradient-to-br ${project.gradient} flex items-center justify-center overflow-hidden`}
               >
-                <span className="text-8xl transform transition-transform duration-500 group-hover:scale-110">
-                  {project.image}
-                </span>
-                
+                {project.image.startsWith('/') ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                  />
+                ) : (
+                  <span className="text-8xl transform transition-transform duration-500 group-hover:scale-110">
+                    {project.image}
+                  </span>
+                )}
+
                 {/* Overlay on hover */}
                 <div
-                  className={`absolute inset-0 bg-slate-900/90 flex items-center justify-center gap-4 transition-opacity duration-300 ${
-                    hoveredId === project.id ? "opacity-100" : "opacity-0"
-                  }`}
+                  className={`absolute inset-0 bg-slate-900/90 flex items-center justify-center gap-4 transition-opacity duration-300 ${hoveredId === project.id ? "opacity-100" : "opacity-0"
+                    }`}
                 >
                   <a
                     href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
                   >
                     <ExternalLink className="w-5 h-5 text-slate-900" />
                   </a>
                   <a
                     href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
                   >
                     <Github className="w-5 h-5 text-slate-900" />
@@ -188,12 +200,12 @@ export default function Projects() {
         </div>
 
         {/* Load More Button */}
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <button className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/50">
             View All Projects
             <ExternalLink className="w-5 h-5" />
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
