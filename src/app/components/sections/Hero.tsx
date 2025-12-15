@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="space-y-8 animate-in fade-in slide-in-from-left duration-700">
             <div className="space-y-4">
               <p className="text-slate-600 dark:text-slate-400 text-lg font-medium">
-                Hi, I'm{" "}
+                Hi, I'm a {" "}
                 <span className="text-orange-500 font-semibold inline-block animate-in fade-in slide-in-from-bottom duration-500">
                   {roles[currentRole]}
                 </span>
