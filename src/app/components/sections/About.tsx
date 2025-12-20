@@ -87,7 +87,7 @@ export default function About() {
             </p>
             <div className="flex gap-4 pt-4">
               <div className="flex-1 bg-orange-50 dark:bg-orange-900/20 rounded-xl p-6 border border-orange-100 dark:border-orange-800">
-                <p className="text-3xl font-bold text-orange-500">55+</p>
+                <p className="text-3xl font-bold text-orange-500">33+</p>
                 <p className="text-slate-600 dark:text-slate-400 mt-1">
                   Projects Delivered
                 </p>

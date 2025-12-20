@@ -85,7 +85,7 @@ export default function Hero() {
             {/* Stats */}
             <div className="flex gap-8 pt-8">
               <div>
-                <p className="text-4xl font-bold text-slate-900 dark:text-white">55+</p>
+                <p className="text-4xl font-bold text-slate-900 dark:text-white">33+</p>
                 <p className="text-slate-600 dark:text-slate-400 mt-1">Projects Completed</p>
               </div>
               <div>
