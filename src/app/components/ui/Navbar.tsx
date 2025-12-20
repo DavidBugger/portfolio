@@ -216,12 +216,12 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="w-full py-3 px-4 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium"
             >
               Toggle {theme === "light" ? "Dark" : "Light"} Mode
-            </button>
+            </button> */}
           </div>
         </div>
       )}
