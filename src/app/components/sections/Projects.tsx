@@ -94,7 +94,7 @@ export default function Projects() {
             Featured Projects
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            A collection of projects that showcase my expertise in web and mobile
+            A collection of my recent projects that showcase my expertise in web and mobile
             development
           </p>
         </div>

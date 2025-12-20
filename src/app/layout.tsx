@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/ui/Navbar';
 import Footer from './components/ui/Footer';
+import { Toaster } from 'sonner';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,6 +20,9 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'Dev Dave - Portfolio',
   description: 'Personal portfolio showcasing my projects and skills',
+  icons: {
+    icon: '/images/favicon.ico',
+  }
   // Remove viewport and themeColor from here
 };
 
@@ -32,7 +36,9 @@ export default function RootLayout({
       <body className={`${inter.className} bg-white text-gray-900`}>
         <Navbar />
         <main>{children}</main>
+         <Toaster position = 'top-center'/>
         <Footer />
+       
       </body>
     </html>
   );

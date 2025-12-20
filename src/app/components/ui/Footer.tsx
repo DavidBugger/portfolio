@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Heart } from "lucide-react";
+import SubscribeForm from "../SubscribeForm";
 
 const footerLinks = {
   navigation: [
@@ -11,16 +12,16 @@ const footerLinks = {
     { name: "Contact", href: "/contact" },
   ],
   services: [
-    { name: "Web Development", href: "/services/web" },
-    { name: "Mobile Development", href: "/services/mobile" },
-    { name: "UI/UX Design", href: "/services/design" },
-    { name: "Consulting", href: "/services/consulting" },
+    { name: "Web Development", href: "#services" },
+    { name: "Mobile Development", href: "#services" },
+    { name: "UI/UX Design", href: "#services" },
+    { name: "Consulting", href: "#services" },
   ],
   resources: [
-    { name: "Blog", href: "/blog" },
-    { name: "Case Studies", href: "/case-studies" },
-    { name: "Resume", href: "/resume" },
-    { name: "Testimonials", href: "/testimonials" },
+    // { name: "Blog", href: "/blog" },
+    // { name: "Case Studies", href: "/case-studies" },
+    { name: "Resume", href: "#resume" },
+    { name: "Testimonials", href: "#testimonials" },
   ],
 };
 
@@ -170,19 +171,7 @@ export default function Footer() {
             <p className="text-slate-400 text-sm mb-4">
               Subscribe to get the latest updates and insights
             </p>
-            <form className="flex flex-col sm:flex-row gap-3 w-full">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full sm:flex-1 px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-slate-500 text-sm sm:text-base"
-              />
-              <button
-                type="submit"
-                className="w-full sm:w-auto px-6 py-2.5 bg-orange-500 hover:bg-orange-600 rounded-lg font-medium transition-colors text-sm sm:text-base text-center"
-              >
-                Subscribe
-              </button>
-            </form>
+            <SubscribeForm />
           </div>
         </div>
       </div>
