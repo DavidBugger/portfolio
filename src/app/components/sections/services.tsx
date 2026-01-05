@@ -2,6 +2,7 @@
 
 import { Code, Smartphone, Palette, Database, Cloud, Zap } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -112,12 +113,32 @@ const process = [
 ];
 
 export default function ServicesPage() {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.5 }
+  };
+
+  const staggerContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen" id="services">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom duration-700">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="text-center max-w-3xl mx-auto"
+          >
             <p className="text-orange-500 font-semibold mb-4">Services</p>
             <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
               What I Can Do For You
@@ -125,24 +146,31 @@ export default function ServicesPage() {
             <p className="text-xl text-slate-600 dark:text-slate-400">
               Comprehensive digital solutions tailored to your business needs
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Services Grid */}
       <section className="py-20 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div
+                <motion.div
                   key={service.title}
-                  className="group p-8 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-orange-500 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-in fade-in slide-in-from-bottom duration-700"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  variants={fadeInUp}
+                  whileHover={{ y: -8 }}
+                  className="group p-8 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-orange-500 dark:hover:border-orange-500 transition-colors duration-300 hover:shadow-xl"
                 >
                   <div
-                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
+                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                   >
                     <Icon className="w-8 h-8 text-white" />
                   </div>
@@ -175,17 +203,23 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Process Section */}
       <section className="py-20 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="text-center mb-16"
+          >
             <p className="text-orange-500 font-semibold mb-2">Process</p>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
               How I Work
@@ -193,14 +227,21 @@ export default function ServicesPage() {
             <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
               A proven process that ensures quality results and client satisfaction
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {process.map((item, index) => (
-              <div
+              <motion.div
                 key={item.step}
-                className="relative p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 animate-in fade-in slide-in-from-bottom duration-700"
-                style={{ animationDelay: `${index * 100}ms` }}
+                variants={fadeInUp}
+                whileHover={{ scale: 1.02 }}
+                className="relative p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="text-6xl font-bold text-orange-500/20 mb-4">
                   {item.step}
@@ -211,15 +252,21 @@ export default function ServicesPage() {
                 <p className="text-slate-600 dark:text-slate-400">
                   {item.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-orange-500 to-orange-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Start Your Project?
           </h2>
@@ -231,8 +278,6 @@ export default function ServicesPage() {
               href="https://wa.me/2348107701730?text=Thank%20you%20for%20your%20interest%20in%20my%20services.%20I'm%20here%20to%20help%20you%20with%20any%20questions%20or%20inquiries%20you%20may%20have."
               className="inline-flex items-center gap-2 bg-white text-orange-500 px-8 py-4 rounded-full font-semibold hover:bg-slate-100 transition-all hover:scale-105 hover:shadow-2xl"
             >
-
-
               Get In Touch
             </Link>
             <Link
@@ -242,7 +287,7 @@ export default function ServicesPage() {
               View My Work
             </Link>
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

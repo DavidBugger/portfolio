@@ -5,6 +5,7 @@ import { useFormState, useFormStatus } from "react-dom";
 import { submitContactForm } from "@/app/actions/contact";
 import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
 
 const contactInfo = [
   {
@@ -28,9 +29,9 @@ const contactInfo = [
 ];
 
 export default function Contact() {
-  const [state, formAction] = useFormState(submitContactForm, { 
-    success: false, 
-    message: "" 
+  const [state, formAction] = useFormState(submitContactForm, {
+    success: false,
+    message: ""
   });
 
   // Show toast notifications based on form submission status
@@ -40,11 +41,31 @@ export default function Contact() {
     }
   }, [state]);
 
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.5 }
+  };
+
+  const staggerContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom duration-700">
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="text-center mb-16"
+        >
           <p className="text-orange-500 font-semibold mb-2">Get In Touch</p>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             Let's Work Together
@@ -52,12 +73,18 @@ export default function Contact() {
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             Have a project in mind? Let's discuss how I can help bring your ideas to life
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="space-y-8 animate-in fade-in slide-in-from-left duration-700">
-            <div>
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="space-y-8"
+          >
+            <motion.div variants={fadeInUp}>
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
                 Contact Information
               </h3>
@@ -65,19 +92,20 @@ export default function Contact() {
                 Feel free to reach out through any of these channels. I'm always open
                 to discussing new projects, creative ideas, or opportunities.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="space-y-6">
+            <motion.div variants={staggerContainer} className="space-y-6">
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
                 return (
-                  <a
+                  <motion.a
                     key={info.title}
                     href={info.link}
-                    className="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl hover:bg-orange-50 dark:hover:bg-orange-900/20 border border-slate-200 dark:border-slate-700 hover:border-orange-500 dark:hover:border-orange-500 transition-all duration-300 group animate-in fade-in slide-in-from-left"
-                    style={{ animationDelay: `${index * 100}ms` }}
+                    variants={fadeInUp}
+                    whileHover={{ x: 10 }}
+                    className="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl hover:bg-orange-50 dark:hover:bg-orange-900/20 border border-slate-200 dark:border-slate-700 hover:border-orange-500 dark:hover:border-orange-500 transition-colors duration-300 group"
                   >
-                    <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -88,13 +116,13 @@ export default function Contact() {
                         {info.value}
                       </p>
                     </div>
-                  </a>
+                  </motion.a>
                 );
               })}
-            </div>
+            </motion.div>
 
             {/* Social Links */}
-            <div className="pt-8">
+            <motion.div variants={fadeInUp} className="pt-8">
               <p className="text-sm font-semibold text-slate-600 dark:text-slate-400 mb-4">
                 Follow Me
               </p>
@@ -128,23 +156,29 @@ export default function Contact() {
                     )
                   }
                 ].map((social) => (
-                  <a
+                  <motion.a
                     key={social.name}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all hover:scale-110"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    className="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center hover:bg-orange-500 hover:text-white transition-colors duration-300"
                     aria-label={social.name}
                   >
                     {social.icon}
-                  </a>
+                  </motion.a>
                 ))}
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div className="animate-in fade-in slide-in-from-right duration-700 delay-150">
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <form action={formAction} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -201,7 +235,7 @@ export default function Contact() {
 
               <SubmitButton />
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
@@ -210,7 +244,7 @@ export default function Contact() {
 
 function SubmitButton() {
   const { pending } = useFormStatus();
-  
+
   return (
     <button
       type="submit"
