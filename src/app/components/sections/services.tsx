@@ -17,18 +17,18 @@ const services = [
     ],
     gradient: "from-orange-500 to-orange-600",
   },
-  {
-    icon: Smartphone,
-    title: "Mobile Development",
-    description: "Native and cross-platform mobile applications",
-    features: [
-      "Flutter Apps",
-      "iOS & Android development",
-      "App Store optimization",
-      "Push notifications",
-    ],
-    gradient: "from-orange-500 to-orange-600",
-  },
+  // {
+  //   icon: Smartphone,
+  //   title: "Mobile Development",
+  //   description: "Native and cross-platform mobile applications",
+  //   features: [
+  //     "Flutter Apps",
+  //     "iOS & Android development",
+  //     "App Store optimization",
+  //     "Push notifications",
+  //   ],
+  //   gradient: "from-orange-500 to-orange-600",
+  // },
   // {
   //   icon: Palette,
   //   title: "UI/UX Design",

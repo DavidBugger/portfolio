@@ -13,11 +13,11 @@ const skills = [
     items: ["Python", "Django", "Flask", "FastAPI", "PHP", "Laravel", "PostgreSQL", "MySQL", "MongoDB"],
     percentage: 90,
   },
-  {
-    category: "Mobile",
-    items: ["Flutter", "iOS", "Android"],
-    percentage: 85,
-  },
+  // {
+  //   category: "Mobile",
+  //   items: ["Flutter", "iOS", "Android"],
+  //   percentage: 85,
+  // },
   {
     category: "Tools",
     items: ["Git", "Docker", "AWS", "Figma", "CI/CD"],

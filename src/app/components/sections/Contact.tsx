@@ -1,10 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useFormState, useFormStatus } from "react-dom";
-import { submitContactForm } from "@/app/actions/contact";
-import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
-import { toast } from "sonner";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
 const contactInfo = [
@@ -29,18 +25,6 @@ const contactInfo = [
 ];
 
 export default function Contact() {
-  const [state, formAction] = useFormState(submitContactForm, {
-    success: false,
-    message: ""
-  });
-
-  // Show toast notifications based on form submission status
-  useEffect(() => {
-    if (state.message) {
-      toast[state.success ? 'success' : 'error'](state.message);
-    }
-  }, [state]);
-
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -71,7 +55,7 @@ export default function Contact() {
             Let's Work Together
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Have a project in mind? Let's discuss how I can help bring your ideas to life
+            Have a project in mind? Schedule a call with me and let's discuss how I can help bring your ideas to life
           </p>
         </motion.div>
 
@@ -89,7 +73,7 @@ export default function Contact() {
                 Contact Information
               </h3>
               <p className="text-slate-600 dark:text-slate-400">
-                Feel free to reach out through any of these channels. I'm always open
+                Feel free to reach out through any of these channels or schedule a consultation call directly via the calendar. I'm always open
                 to discussing new projects, creative ideas, or opportunities.
               </p>
             </motion.div>
@@ -172,96 +156,25 @@ export default function Contact() {
             </motion.div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Calendly Inline Widget */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="h-[600px] md:h-full min-h-[600px] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800"
           >
-            <form action={formAction} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                ></textarea>
-              </div>
-
-              <SubmitButton />
-            </form>
+            <iframe
+              src="https://calendly.com/davidakanang/consultation-call?hide_landing_page_details=1&hide_gdpr_banner=1"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              title="Select a Date and Time"
+              className="w-full h-full"
+            ></iframe>
           </motion.div>
         </div>
       </div>
     </section>
-  );
-}
-
-function SubmitButton() {
-  const { pending } = useFormStatus();
-
-  return (
-    <button
-      type="submit"
-      disabled={pending}
-      className="w-full md:w-auto px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2 disabled:opacity-70"
-    >
-      {pending ? (
-        <>
-          <Loader2 className="w-5 h-5 animate-spin" />
-          Sending...
-        </>
-      ) : (
-        <>
-          <Send className="w-5 h-5" />
-          Send Message
-        </>
-      )}
-    </button>
   );
 }

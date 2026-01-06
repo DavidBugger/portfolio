@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/ui/Navbar';
 import Footer from './components/ui/Footer';
+import BackToTop from './components/ui/BackToTop';
 import { Toaster } from 'sonner';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -36,9 +37,9 @@ export default function RootLayout({
       <body className={`${inter.className} bg-white text-gray-900`}>
         <Navbar />
         <main>{children}</main>
-         <Toaster position = 'top-center'/>
+        <Toaster position="top-center" />
         <Footer />
-       
+        <BackToTop />
       </body>
     </html>
   );
