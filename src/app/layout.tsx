@@ -5,6 +5,7 @@ import Navbar from './components/ui/Navbar';
 import Footer from './components/ui/Footer';
 import BackToTop from './components/ui/BackToTop';
 import { Toaster } from 'sonner';
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Toaster position="top-center" />
         <Footer />
         <BackToTop />
+        <Analytics />
       </body>
     </html>
   );
