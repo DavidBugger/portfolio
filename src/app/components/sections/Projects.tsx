@@ -4,9 +4,53 @@ import { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const categories = ["All", "Web Apps", "Tax & Audit Solutions", "Oil & Gas Solutions"];
+const categories = ["All", "Web Apps", "Logistics & E-commerce", "AI & ML Solutions", "Tax & Audit Solutions", "Oil & Gas Solutions"];
 
 const projects = [
+  {
+    id: 9,
+    title: "VendRush Delivery Platform",
+    category: "Logistics & E-commerce",
+    tags: ["TypeScript", "Supabase", "Next.js", "PostGIS", "Edge Functions"],
+    description: "Lead architect for a serverless hyperlocal delivery infrastructure. Built complex rider dispatch algorithms, real-time tracking systems, and secure end-to-end payment flows.",
+    image: "/projects/vendrush.png",
+    liveUrl: "https://vendrush.com",
+    githubUrl: "https://github.com/DavidBugger",
+    gradient: "from-blue-600 to-indigo-700",
+  },
+  {
+    id: 10,
+    title: "Intelligent Flood Warning System",
+    category: "AI & ML Solutions",
+    tags: ["Python", "XGBoost", "LSTM", "Next.js", "FastAPI"],
+    description: "High-impact environmental AI pipeline predicting coastal flooding via XGBoost/LSTM models. Featuring an interactive dashboard with real-time risk assessment maps.",
+    image: "/projects/flood.png",
+    // liveUrl: "https://github.com/DavidBugger",
+    githubUrl: "https://github.com/DavidBugger/intelligent-flood-prediction",
+    gradient: "from-cyan-500 to-blue-600",
+  },
+  {
+    id: 11,
+    title: "Gonarlafiya Livestock AI",
+    category: "AI & ML Solutions",
+    tags: ["FastAPI", "Python", "ML Model", "GCP"],
+    description: "AI-driven disease prediction API for farmers. Providing multilingual disease advice (English/Hausa) based on symptom analysis and historical data.",
+    image: "/projects/gonar-lafiya.png",
+    liveUrl: "https://gonar-lafiya-api.onrender.com/docs",
+    githubUrl: "https://github.com/DavidBugger/gonar-lafiya-api",
+    gradient: "from-emerald-500 to-teal-700",
+  },
+  {
+    id: 12,
+    title: "CampLearn EdTech Core",
+    category: "Web Apps",
+    tags: ["Django", "PostgreSQL", "Redis", "Flutter"],
+    description: "Scalable EdTech backend for high-concurrency exam results and interactive learning. Managed real-time data synchronization between cross-platform clients.",
+    image: "/projects/camplearn.png",
+    liveUrl: "https://camp-learn.onrender.com/api/docs/",
+    githubUrl: "https://github.com/DavidBugger/camp-learn-backend",
+    gradient: "from-purple-600 to-indigo-800",
+  },
   {
     id: 1,
     title: "Zambis Petroleum Operations Portal",

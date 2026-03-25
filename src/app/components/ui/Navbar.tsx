@@ -40,7 +40,8 @@ export default function Navbar() {
       href: "#services",
       dropdown: [
         { name: "Web Development", href: "#services" },
-        { name: "Mobile Development", href: "#services" },
+        // { name: "Mobile Development", href: "#services" },
+        { name: "AI/ Machine Learning Solutions", href: "#services" },
         // { name: "UI/UX Design", href: "/services/design" },
       ]
     },
