@@ -22,8 +22,8 @@ export default function ResumeDownload({
     try {
       // Option 1: Direct download from public folder
       const link = document.createElement("a");
-      link.href = "/DevDave_Resume.pdf"; // Make sure to place your resume.pdf in the public folder
-      link.download = "DevDave_Resume.pdf";
+      link.href = "/Akanang_David_Ignatius_Resume_Updated.pdf"; // Make sure to place your resume.pdf in the public folder
+      link.download = "Akanang_David_Ignatius_Resume_Updated.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -48,7 +48,7 @@ export default function ResumeDownload({
     try {
       // You can use libraries like jsPDF or html2canvas for dynamic PDF generation
       // For now, we'll just download a static file
-      
+
       // Example with fetch (if your resume is hosted externally)
       // const response = await fetch('https://your-resume-url.com/resume.pdf');
       // const blob = await response.blob();
