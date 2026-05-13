@@ -8,6 +8,28 @@ const categories = ["All", "Web Apps", "Logistics & E-commerce", "AI & ML Soluti
 
 const projects = [
   {
+    id: 13,
+    title: "Oya Riyders Mobility Platform",
+    category: "Logistics & E-commerce",
+    tags: ["Next.js", "Tailwind CSS", "Supabase", "Paystack", "Google Maps"],
+    description: "Lead developer for a full-scale mobility solution offering safe, reliable, and affordable rides. Built with real-time tracking, automated dispatching, and a secure cashless payment ecosystem.",
+    image: "/projects/oya_landing.png",
+    liveUrl: "https://oyariyders.com/",
+    // githubUrl: "https://github.com/DavidBugger",
+    gradient: "from-orange-500 to-red-600",
+  },
+  {
+    id: 14,
+    title: "DVCEHF Humanitarian Portal",
+    category: "Web Apps",
+    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Supabase"],
+    description: "An NGO platform for the Displaced and Vulnerable Children Education and Health Foundation. Facilitates donations, impact tracking, and community outreach for IDPs.",
+    image: "/projects/dvcehf.png",
+    liveUrl: "https://www.dvcehf.org/",
+    // githubUrl: "https://github.com/DavidBugger",
+    gradient: "from-blue-500 to-teal-600",
+  },
+  {
     id: 9,
     title: "VendRush Delivery Platform",
     category: "Logistics & E-commerce",
@@ -15,7 +37,7 @@ const projects = [
     description: "Lead architect for a serverless hyperlocal delivery infrastructure. Built complex rider dispatch algorithms, real-time tracking systems, and secure end-to-end payment flows.",
     image: "/projects/vendrush.png",
     liveUrl: "https://vendrush.com",
-    githubUrl: "https://github.com/DavidBugger",
+    // githubUrl: "https://github.com/DavidBugger",
     gradient: "from-blue-600 to-indigo-700",
   },
   {
@@ -37,7 +59,7 @@ const projects = [
     description: "AI-driven disease prediction API for farmers. Providing multilingual disease advice (English/Hausa) based on symptom analysis and historical data.",
     image: "/projects/gonar-lafiya.png",
     liveUrl: "https://gonar-lafiya-api.onrender.com/docs",
-    githubUrl: "https://github.com/DavidBugger/gonar-lafiya-api",
+    // githubUrl: "https://github.com/DavidBugger/gonar-lafiya-api",
     gradient: "from-emerald-500 to-teal-700",
   },
   {
@@ -48,7 +70,7 @@ const projects = [
     description: "Scalable EdTech backend for high-concurrency exam results and interactive learning. Managed real-time data synchronization between cross-platform clients.",
     image: "/projects/camplearn.png",
     liveUrl: "https://camp-learn.onrender.com/api/docs/",
-    githubUrl: "https://github.com/DavidBugger/camp-learn-backend",
+    // githubUrl: "https://github.com/DavidBugger/camp-learn-backend",
     gradient: "from-purple-600 to-indigo-800",
   },
   {
@@ -59,20 +81,20 @@ const projects = [
     description: "An integrated digital operations platform for Zambis Petroleum, designed to streamline oilfield logistics, monitor equipment and asset utilization in real time, manage rentals and inventory, and support efficient operations across multiple field locations.",
     image: "/projects/zambis.png",
     liveUrl: "https://zambispetroleum.com",
-    githubUrl: "https://github.com/DavidBugger",
+    // githubUrl: "https://github.com/DavidBugger",
     gradient: "from-amber-500 to-slate-700",
   },
-  {
-    id: 3,
-    title: "Oya Riyders Dashboard",
-    category: "Web Apps",
-    tags: ["Next.js", "Paystack", 'Supabase', 'FastAPI', "PostgreSQL"],
-    description: "Analytics dashboard for ride bookings with real-time metrics",
-    image: "/projects/oya_riyders.png",
-    liveUrl: "https://oya-riyders-dashboard.vercel.app/",
-    githubUrl: "https://github.com/DavidBugger",
-    gradient: "from-orange-500 to-red-600",
-  },
+  // {
+  //   id: 3,
+  //   title: "Oya Riyders Dashboard",
+  //   category: "Web Apps",
+  //   tags: ["Next.js", "Paystack", 'Supabase', 'FastAPI', "PostgreSQL"],
+  //   description: "Analytics dashboard for ride bookings with real-time metrics",
+  //   image: "/projects/oya_riyders.png",
+  //   liveUrl: "https://oya-riyders-dashboard.vercel.app/",
+  //   githubUrl: "https://github.com/DavidBugger",
+  //   gradient: "from-orange-500 to-red-600",
+  // },
   {
     id: 5,
     title: "Mabiz Global",
@@ -81,7 +103,7 @@ const projects = [
     description: "Designed and implemented the both the frontend & backend architecture for the Mabiz Global Website",
     image: "/projects/mabiz.png",
     liveUrl: "https://mabizglobal.com",
-    githubUrl: "https://github.com/DavidBugger",
+    // githubUrl: "https://github.com/DavidBugger",
     gradient: "from-yellow-500 to-orange-600",
   },
   {
@@ -92,7 +114,7 @@ const projects = [
     description: "API for learning Hausa language with AI integrations ",
     image: "/projects/learn-hausa-backend.png",
     liveUrl: "https://github.com/DavidBugger/learn-hausa-backend.git",
-    githubUrl: "https://github.com/DavidBugger/learn-hausa-backend.git",
+    // githubUrl: "https://github.com/DavidBugger/learn-hausa-backend.git",
     gradient: "from-pink-500 to-purple-600",
   },
   {
@@ -103,7 +125,7 @@ const projects = [
     description: "Architected the backend for the BECE Result Portal, handling concurrent traffic for over 50,000 students. Introduced Redis caching to resolve legacy server response bottlenecks, drastically reducing latency during high-pressure result cycles. Optimized complex database queries and indexed large datasets to ensure 100% uptime and secure, real-time access for a high-traffic government platform.",
     image: "/projects/bece.png",
     liveUrl: "https://moebauchi.bu.gov.ng/bece_result/",
-    githubUrl: "https://github.com/DavidBugger",
+    // githubUrl: "https://github.com/DavidBugger",
     gradient: "from-blue-600 to-slate-800",
   },
   {
@@ -114,7 +136,7 @@ const projects = [
     description: "Designed and implemented backend APIs powering the Zac Motors automotive platform. Built secure and scalable RESTful services to support vehicle listings, inquiries, and administrative workflows. Implemented database-driven business logic to manage inventory, user interactions, and operational data. Optimized API performance and query efficiency to ensure fast response times under production usage. Collaborated with frontend teams to ensure seamless API consumption and reliable system integration.",
     image: "/projects/zacmotors.png",
     liveUrl: "https://zacmotors.com/",
-    githubUrl: "https://github.com/DavidBugger",
+    // githubUrl: "https://github.com/DavidBugger",
     gradient: "from-slate-700 to-orange-600",
   }
 ];

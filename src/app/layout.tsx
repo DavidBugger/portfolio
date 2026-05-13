@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   description: 'Personal portfolio showcasing my projects and skills',
   icons: {
     icon: '/images/favicon.ico',
+    apple: '/images/apple-icon.png',
   }
   // Remove viewport and themeColor from here
 };
