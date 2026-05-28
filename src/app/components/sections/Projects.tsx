@@ -8,6 +8,17 @@ const categories = ["All", "Web Apps", "Logistics & E-commerce", "AI & ML Soluti
 
 const projects = [
   {
+    id: 15,
+    title: "Remote Job Automator",
+    category: "AI & ML Solutions",
+    tags: ["Python", "Google Gemini", "Web Scraping", "Automation"],
+    description: "A fully automated, 7-phase pipeline designed to scan for remote job openings, find recruiter contacts, and generate personalized AI-driven pitches using Google Gemini.",
+    image: "/projects/remote-jobs-automator.png",
+    liveUrl: "https://github.com/DavidBugger/remote-jobs-automator",
+    githubUrl: "https://github.com/DavidBugger/remote-jobs-automator",
+    gradient: "from-emerald-500 to-teal-700",
+  },
+  {
     id: 13,
     title: "Oya Riyders Mobility Platform",
     category: "Logistics & E-commerce",
@@ -69,7 +80,7 @@ const projects = [
     tags: ["Django", "PostgreSQL", "Redis", "Flutter"],
     description: "Scalable EdTech backend for high-concurrency exam results and interactive learning. Managed real-time data synchronization between cross-platform clients.",
     image: "/projects/camplearn.png",
-    liveUrl: "https://camp-learn.onrender.com/api/docs/",
+    liveUrl: "https://camplearn-backend.onrender.com/api/docs/",
     // githubUrl: "https://github.com/DavidBugger/camp-learn-backend",
     gradient: "from-purple-600 to-indigo-800",
   },

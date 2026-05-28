@@ -80,7 +80,7 @@ export default function Hero() {
                 A Fullstack
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
-                  Web Developer
+                  Engineer
                 </span>
               </motion.h1>
             </div>
