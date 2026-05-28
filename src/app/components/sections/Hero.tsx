@@ -77,7 +77,7 @@ export default function Hero() {
                 </span>
               </motion.p>
               <motion.h1 variants={fadeInUp} className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white leading-tight">
-                A Fullstack
+                A Full-Stack
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
                   Engineer
