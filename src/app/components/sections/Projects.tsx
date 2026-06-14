@@ -8,6 +8,16 @@ const categories = ["All", "Web Apps", "Logistics & E-commerce", "AI & ML Soluti
 
 const projects = [
   {
+    id: 16,
+    title: "ChatBot Pro",
+    category: "AI & ML Solutions",
+    tags: ["Next.js", "OpenAI", "Tailwind CSS", "SaaS", "WhatsApp API"],
+    description: "An AI-powered chatbot SaaS platform that captures leads, answers questions, and books appointments 24/7. Built for real estate, hotels, and logistics companies in Abuja — 3 mins to first lead, 0 missed inquiries.",
+    image: "/projects/chatbot-pro.png",
+    liveUrl: "https://chatbot-pro-phi.vercel.app/",
+    gradient: "from-lime-400 to-emerald-700",
+  },
+  {
     id: 15,
     title: "Remote Job Automator",
     category: "AI & ML Solutions",
