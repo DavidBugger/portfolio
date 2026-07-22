@@ -182,7 +182,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-xs sm:text-sm flex items-center gap-1 text-center sm:text-left">
               © {currentYear} DevDave Solutions. Made with{" "}
-              <Heart className="w-4 h-4 text-orange-500 fill-orange-500" /> in Nigeria
+              <Heart className="w-4 h-4 text-orange-500 fill-orange-500" />
             </p>
             <div className="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6 text-xs sm:text-sm mt-3 sm:mt-0">
               <Link

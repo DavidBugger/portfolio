@@ -8,6 +8,16 @@ const categories = ["All", "Web Apps", "Logistics & E-commerce", "AI & ML Soluti
 
 const projects = [
   {
+    id: 17,
+    title: "FoodRescue (Open Source)",
+    category: "Web Apps",
+    tags: ["Collaboration", "Open Source", "Code Review", "Frontend"],
+    description: "An open-source collaboration platform connecting communities to reduce food waste. Contributed to feature implementation, code reviews, and software quality improvements alongside an international team of developers.",
+    image: "/projects/foodrescue.png",
+    liveUrl: "https://foodrescue-deploy-client.vercel.app/",
+    gradient: "from-green-500 to-emerald-600",
+  },
+  {
     id: 16,
     title: "ChatBot Pro",
     category: "AI & ML Solutions",

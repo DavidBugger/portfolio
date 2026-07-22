@@ -23,8 +23,8 @@ export default function Hero() {
   const handleDownloadResume = () => {
     // Create a link element
     const link = document.createElement("a");
-    link.href = "/Akanang_David_Ignatius_FullStack_Developer.pdf";
-    link.download = "Akanang_David_Ignatius_FullStack_Developer.pdf";
+    link.href = "/Akanang_David_Ignatius_master_resume.pdf";
+    link.download = "Akanang_David_Ignatius_master_resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

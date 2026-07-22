@@ -20,13 +20,23 @@ export const viewport: Viewport = {
 
 // Metadata configuration
 export const metadata: Metadata = {
-  title: 'Dev Dave - Portfolio',
-  description: 'Personal portfolio showcasing my projects and skills',
+  title: 'David Akanang | Full-Stack Software Engineer & AI Specialist',
+  description: 'Portfolio of David Akanang (DevDave). Python Software Engineer, Backend & Full-Stack Developer specializing in AI Systems, Django, React, and Scalable Architecture based in Abuja, Nigeria.',
+  keywords: ['David Akanang', 'Software Engineer', 'Backend Developer', 'Full-Stack Developer', 'Python', 'Django', 'React', 'AI Systems', 'Next.js', 'Nigeria'],
+  authors: [{ name: 'David Akanang' }],
+  creator: 'David Akanang',
+  openGraph: {
+    type: 'website',
+    locale: 'en_NG',
+    url: 'https://devdave-portfolio.vercel.app/',
+    title: 'David Akanang | Full-Stack Software Engineer',
+    description: 'Portfolio of David Akanang, a Python Software Engineer specializing in scalable backend systems and AI applications.',
+    siteName: 'DevDave Portfolio',
+  },
   icons: {
-    icon: '/images/favicon.ico',
-    apple: '/images/apple-icon.png',
+    icon: '/icon.svg',
+    apple: '/icon.svg',
   }
-  // Remove viewport and themeColor from here
 };
 
 export default function RootLayout({
