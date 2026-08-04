@@ -22,9 +22,12 @@ export default function Icon() {
         }}
       >
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '2px',
+          display: 'flex',
+          flexWrap: 'wrap',
+          width: '28px',
+          height: '28px',
+          justifyContent: 'space-between',
+          alignContent: 'space-between',
         }}>
           {[...Array(9)].map((_, i) => (
             <div key={i} style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#f97316' }} />

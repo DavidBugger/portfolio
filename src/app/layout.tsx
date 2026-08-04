@@ -33,10 +33,6 @@ export const metadata: Metadata = {
     title: 'David Akanang | Full-Stack Software Engineer',
     description: 'Portfolio of David Akanang, a Python Software Engineer specializing in scalable backend systems and AI applications.',
     siteName: 'DevDave Portfolio',
-  },
-  icons: {
-    icon: '/icon.svg',
-    apple: '/icon.svg',
   }
 };
 
