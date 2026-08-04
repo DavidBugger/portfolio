@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from './components/ui/Navbar';
 import Footer from './components/ui/Footer';
 import BackToTop from './components/ui/BackToTop';
+import ChatBot from './components/ui/ChatBot';
 import { Toaster } from 'sonner';
 import { Analytics } from "@vercel/analytics/next"
 
@@ -52,6 +53,7 @@ export default function RootLayout({
         <Toaster position="top-center" />
         <Footer />
         <BackToTop />
+        <ChatBot />
         <Analytics />
       </body>
     </html>
